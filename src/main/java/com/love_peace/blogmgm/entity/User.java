@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Index;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import java.io.Serializable;
 
 /**
  * @Author: LiuHao
@@ -13,9 +14,9 @@ import javax.persistence.UniqueConstraint;
 @Entity
 @Table(uniqueConstraints = {@UniqueConstraint(name = "udx01_certification_info", columnNames = {"userId"})},
         indexes ={ @Index(name = "idx01_certification_info", columnList = "userId")})
-public class User extends AbstractEntity{
+public class User extends AbstractEntity implements Serializable {
 
-    private static final long serialVersionUID = -1725124311672543507L;
+    private static final long serialVersionUID = -906533889433117278L;
 
     private String userId;
 

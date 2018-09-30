@@ -13,7 +13,4 @@ import org.springframework.stereotype.Repository;
 public class UserRepository extends AbstractRepository<User> {
     QUser qUser = QUser.user;
 
-    public void persistUser(User user){
-        this.persist(user);
-    }
 }
