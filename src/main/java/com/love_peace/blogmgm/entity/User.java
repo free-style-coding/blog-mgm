@@ -32,6 +32,9 @@ public class User extends AbstractEntity implements Serializable {
         this.userId = userId;
     }
 
+
+
+
     public String getName() {
         return name;
     }
