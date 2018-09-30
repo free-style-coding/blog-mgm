@@ -12,8 +12,8 @@ import java.io.Serializable;
  * @Date: 2018/9/29_19:16
  */
 @Entity
-@Table(uniqueConstraints = {@UniqueConstraint(name = "udx01_certification_info", columnNames = {"userId"})},
-        indexes ={ @Index(name = "idx01_certification_info", columnList = "userId")})
+@Table(uniqueConstraints = {@UniqueConstraint(name = "udx01_user", columnNames = {"userId"}),
+        @UniqueConstraint(name = "ndx01__user", columnNames = {"name"})})
 public class User extends AbstractEntity implements Serializable {
 
     private static final long serialVersionUID = -906533889433117278L;
@@ -31,9 +31,6 @@ public class User extends AbstractEntity implements Serializable {
     public void setUserId(String userId) {
         this.userId = userId;
     }
-
-
-
 
     public String getName() {
         return name;

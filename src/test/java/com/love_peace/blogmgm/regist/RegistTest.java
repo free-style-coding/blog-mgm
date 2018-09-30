@@ -26,7 +26,7 @@ public class RegistTest {
         User user = new User();
         user.setName("liuhao");
         user.setPassword("123456");
-        user.setUserId(TransIdUtil.generateNumForTrans("REGIST"));
+        user.setUserId(TransIdUtil.generateNumForTrans("REGIST_"));
         userService.regist(user);
     }
 }
